@@ -1,6 +1,5 @@
 import unittest
 import basetest
-import logging
 
 
 class TestShelfs(basetest.BaseTestCase):

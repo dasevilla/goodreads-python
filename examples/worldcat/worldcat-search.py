@@ -1,17 +1,14 @@
 import logging
-import pprint
 
 from worldcat.request.xid import xISBNRequest
 
 from goodreads import GoodReadsClient
-from goodreads.parser import GoodReadsParser
 
 
 def get_books(user_id, shelf_name):
     key = "GOODREADS_API_KEY"
     secret = "GOODREADS_API_SECRET"
 
-    goodreads_parser = GoodReadsParser()
     goodreads_client = GoodReadsClient(key, secret)
 
     return goodreads_client.get_shelf(user_id, shelf_name)
