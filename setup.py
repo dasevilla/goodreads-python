@@ -1,13 +1,32 @@
-from distutils.core import setup
+from setuptools import setup, find_packages
+
+
+with open('README.rst') as fp:
+    long_description = fp.read()
+
 
 setup(
-    name='GoodReads API Client',
-    version='0.1',
+    name='Goodreads API Client',
+    version='0.1.2',
+
+    description='A simple Python client library for the Goodreads API',
+    long_description=long_description,
+
     author='Devin Sevilla',
     author_email='dasevilla@gmail.com',
-    url='http://example.com/',
-    description=("Python Client for accessing the GoodReads API"),
-    license="Apache License, Version 2.0",
-    packages=['goodreads'],
-    zip_safe=True,
+
+    url='https://github.com/dasevilla/goodreads-python',
+    download_url='https://github.com/dasevilla/goodreads-python/tarball/master',
+
+    classifiers=[
+        'Development Status :: 3 - Alpha',
+        'License :: OSI Approved :: MIT License',
+        'Programming Language :: Python :: 2.7',
+    ],
+
+    install_requires=[
+    ],
+
+    packages=find_packages(),
+
 )
