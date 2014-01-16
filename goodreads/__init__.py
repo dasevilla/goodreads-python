@@ -15,7 +15,7 @@ class GoodReadsClient(object):
         self.parser = GoodReadsParser()
 
     def unauthorized_request(self, base_url, query_params):
-        if "key"not in query_params:
+        if "key" not in query_params:
             query_params["key"] = self.key
         if "per_page" not in query_params:
             query_params["per_page"] = self.DEFAULT_PAGE_SIZE
