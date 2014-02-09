@@ -7,7 +7,7 @@ from goodreads.parser import GoodReadsParser
 class GoodReadsClient(object):
 
     BASE_URL = "http://www.goodreads.com/"
-    DEFAULT_PAGE_SIZE = 200
+    DEFAULT_PAGE_SIZE = 20
 
     def __init__(self, key, secret):
         self.key = key
